@@ -1,0 +1,135 @@
+$cor-calculadora: #ffebcdaf, grey, #ffebcdaf;
+$cor-borda-calculadora: black;
+$cor-titulo: black;
+$cor-tela-resultado: #19c986;
+$cor-fonte-resultado: rgb(4, 43, 33);
+$cor-botao-numero:  rgb(24, 22, 22);
+$cor-fonte-botao: #fff; 
+$cor-hover-botao: rgb(94, 89, 89);
+$cor-botao-igual: rgba(19, 18, 18, 1);
+$cor-hover-igual: black;
+$cor-botao-ce: red;
+$cor-hover-ce: darkred;
+$cor-botao-operador: #0a0a25;
+$cor-hover-operador:#3d3d61;
+
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/mat.jpg);
+    background-size: cover;
+
+}
+
+.calculadora {
+    font-size: medium;
+    position: absolute;
+    background-image: linear-gradient(50deg,$cor-calculadora);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    padding: 15px;
+    border-color: $cor-borda-calculadora;
+    border-right: 7px solid;
+    border-bottom: 4px solid;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: $cor-titulo;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#resultado {
+    background-color: $cor-tela-resultado;
+    width: 260px;
+    height: 45px;
+    margin: 5px;
+    font-size: 35px;
+    color:$cor-fonte-resultado;
+    text-align: right;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.botao {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: $cor-botao-numero;
+    border-radius: 50%;
+    border: none;
+    color: $cor-fonte-botao;
+    margin: 3px;
+}
+
+.botao:hover {
+    background-color: $cor-hover-botao;
+}
+
+.botao-operador {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: $cor-botao-operador;
+    border-radius: 50%;
+    border: none;
+    color: $cor-fonte-botao;
+    margin: 3px;
+}
+
+.botao-operador:hover {
+    background-color: $cor-hover-operador;
+}
+
+.botao-igual {
+    width: 60px;
+    height: 120px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color:$cor-botao-operador;
+    border-radius: 43%;
+    border: none;
+    color: $cor-fonte-botao;
+}
+
+.botao-igual:hover {
+    background-color: $cor-hover-operador;    
+}
+
+.botao-zero {
+    width: 120px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: $cor-botao-numero;
+    border-radius: 43%;
+    border: none;
+    color: $cor-fonte-botao;
+}
+
+.botao-zero:hover {
+    background-color: $cor-hover-botao;    
+}
+
+.botao-ce {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color:$cor-botao-ce;
+    border-radius: 43%;
+    border: none;
+    color: $cor-fonte-botao;
+}
+
+.botao-ce:hover {
+    background-color: $cor-hover-ce;
+}
