@@ -1,3 +1,14 @@
+.botao, .botao-operador, .botao-igual, .botao-zero, .botao-ce {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #181616;
+  border-radius: 50%;
+  color: #fff;
+  margin: 3px;
+  border-right: 3px solid;
+  border-bottom: 1px solid;
+}
+
 * {
   margin: 0;
 }
@@ -29,6 +40,13 @@ h1 {
   text-align: center;
 }
 
+p {
+  max-width: 8ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #resultado {
   background-color: #19c986;
   width: 260px;
@@ -45,13 +63,6 @@ h1 {
 .botao {
   width: 60px;
   height: 60px;
-  font-size: 30px;
-  cursor: pointer;
-  background-color: #181616;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  margin: 3px;
 }
 
 .botao:hover {
@@ -61,13 +72,7 @@ h1 {
 .botao-operador {
   width: 60px;
   height: 60px;
-  font-size: 30px;
-  cursor: pointer;
   background-color: #0a0a25;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  margin: 3px;
 }
 
 .botao-operador:hover {
@@ -77,12 +82,8 @@ h1 {
 .botao-igual {
   width: 60px;
   height: 120px;
-  font-size: 30px;
-  cursor: pointer;
-  background-color: #0a0a25;
   border-radius: 43%;
-  border: none;
-  color: #fff;
+  background-color: #0a0a25;
 }
 
 .botao-igual:hover {
@@ -92,12 +93,7 @@ h1 {
 .botao-zero {
   width: 120px;
   height: 60px;
-  font-size: 30px;
-  cursor: pointer;
-  background-color: #181616;
   border-radius: 43%;
-  border: none;
-  color: #fff;
 }
 
 .botao-zero:hover {
@@ -107,12 +103,8 @@ h1 {
 .botao-ce {
   width: 60px;
   height: 60px;
-  font-size: 30px;
-  cursor: pointer;
-  background-color: red;
   border-radius: 43%;
-  border: none;
-  color: #fff;
+  background-color: red;
 }
 
 .botao-ce:hover {

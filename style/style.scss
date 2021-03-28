@@ -1,3 +1,5 @@
+// cores usando na calculadora.
+
 $cor-calculadora: #ffebcdaf, grey, #ffebcdaf;
 $cor-borda-calculadora: black;
 $cor-titulo: black;
@@ -12,6 +14,19 @@ $cor-botao-ce: red;
 $cor-hover-ce: darkred;
 $cor-botao-operador: #0a0a25;
 $cor-hover-operador:#3d3d61;
+
+// Configuração comum dos botões.
+
+%config-botao {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: $cor-botao-numero;
+    border-radius: 50%;
+    color: $cor-fonte-botao;
+    margin: 3px;
+    border-right: 3px solid;
+    border-bottom: 1px solid;
+}
 
 * {
     margin: 0;
@@ -44,6 +59,15 @@ h1 {
     text-align: center;
 }
 
+//Comando para impedir que os numeros digitados ultra passe o tamanho da tela resultado.
+
+p {
+    max-width: 8ch;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
 #resultado {
     background-color: $cor-tela-resultado;
     width: 260px;
@@ -60,13 +84,7 @@ h1 {
 .botao {
     width: 60px;
     height: 60px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color: $cor-botao-numero;
-    border-radius: 50%;
-    border: none;
-    color: $cor-fonte-botao;
-    margin: 3px;
+    @extend %config-botao;
 }
 
 .botao:hover {
@@ -76,13 +94,8 @@ h1 {
 .botao-operador {
     width: 60px;
     height: 60px;
-    font-size: 30px;
-    cursor: pointer;
+    @extend %config-botao;
     background-color: $cor-botao-operador;
-    border-radius: 50%;
-    border: none;
-    color: $cor-fonte-botao;
-    margin: 3px;
 }
 
 .botao-operador:hover {
@@ -92,12 +105,9 @@ h1 {
 .botao-igual {
     width: 60px;
     height: 120px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color:$cor-botao-operador;
-    border-radius: 43%;
-    border: none;
-    color: $cor-fonte-botao;
+    @extend %config-botao;
+    border-radius: 43%;    
+    background-color: $cor-botao-operador;
 }
 
 .botao-igual:hover {
@@ -107,12 +117,8 @@ h1 {
 .botao-zero {
     width: 120px;
     height: 60px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color: $cor-botao-numero;
+    @extend %config-botao;
     border-radius: 43%;
-    border: none;
-    color: $cor-fonte-botao;
 }
 
 .botao-zero:hover {
@@ -122,12 +128,9 @@ h1 {
 .botao-ce {
     width: 60px;
     height: 60px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color:$cor-botao-ce;
+    @extend %config-botao;
     border-radius: 43%;
-    border: none;
-    color: $cor-fonte-botao;
+    background-color: $cor-botao-ce;
 }
 
 .botao-ce:hover {
